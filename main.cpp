@@ -5,49 +5,45 @@
 using namespace std;
 
 int main() {
-  
-    Pila<int> pila;
+    const int MAX_DIMENSIONE = 5;
 
-    
-    pila.push(200);
-    pila.push(400);
-    pila.push(500);
+    // Test della Pila
+    Pila<int, MAX_DIMENSIONE> pila;
 
-  
-    cout<< "L'elemento in cima alla pila: " << pila.top();
-    cout<< "La dimensione della pila: " << pila.size();
+    pila.aggiungi(10);
+    pila.aggiungi(20);
+    pila.aggiungi(30);
 
-    cout<< "Rimuovo elemento dalla pila: " << pila.pop();
-    cout<< "Nuovo elemento in cima alla pila: " << pila.top();
-    cout<< "Dimensione della pila dopo il pop: " << pila.size();
-  
-    if (pila.isEmpty()) {
-    cout<< "La pila è vuota";
+    cout << "Elemento in cima alla pila: " << pila.cima() << endl;
+    cout << "Dimensione della pila: " << pila.dimensione() << endl;
+
+    cout << "Rimuovo elemento dalla pila: " << pila.rimuovi() << endl;
+    cout << "Nuovo elemento in cima alla pila: " << pila.cima() << endl;
+
+    if (pila.vuota()) {
+        cout << "La pila è vuota" << endl;
     } else {
-    << "La pila non è vuota";
+        cout << "La pila non è vuota" << endl;
     }
 
+    // Test della Coda
+    Coda<int, MAX_DIMENSIONE> coda;
 
-    Coda<int> coda;
+    coda.aggiungi(100);
+    coda.aggiungi(200);
+    coda.aggiungi(300);
 
-    coda.enqueue(300);
-    coda.enqueue(500);
-    coda.enqueue(600);
+    cout << "Elemento in testa alla coda: " << coda.inTesta() << endl;
+    cout << "Dimensione della coda: " << coda.dimensione() << endl;
 
- 
-    cout<< "Elemento in testa alla coda: " << coda.front();
-    cout<< "Dimensione della coda: " << coda.size();
+    cout << "Rimuovo elemento dalla coda: " << coda.rimuovi() << endl;
+    cout << "Nuovo elemento in testa alla coda: " << coda.inTesta() << endl;
 
-    cout<< "Rimuovo elemento dalla coda: " << coda.dequeue();
-    cout<< "Nuovo elemento in testa alla coda: " << coda.front();
-    cout<< "Dimensione della coda dopo il dequeue: " << coda.size();
-
-    if (coda.isEmpty()) {
-    cout<< "La coda è vuota";
+    if (coda.vuota()) {
+        cout << "La coda è vuota" << endl;
     } else {
-    cout<< "La coda non è vuota";
+        cout << "La coda non è vuota" << endl;
     }
 
-
-    return 0;
+    return 0;
 }
