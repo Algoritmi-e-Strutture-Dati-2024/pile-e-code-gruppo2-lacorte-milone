@@ -9,9 +9,9 @@ int main() {
     Pila<int> pila;
 
     
-    pila.push(30);
-    pila.push(50);
-    pila.push(60);
+    pila.push(200);
+    pila.push(400);
+    pila.push(500);
 
   
     cout<< "L'elemento in cima alla pila: " << pila.top();
@@ -22,17 +22,17 @@ int main() {
     cout<< "Dimensione della pila dopo il pop: " << pila.size();
   
     if (pila.isEmpty()) {
-    cout<< "La pila è vuota";
+    cout<< "La pila Ã¨ vuota";
     } else {
-    << "La pila non è vuota";
+    << "La pila non Ã¨ vuota";
     }
 
 
     Coda<int> coda;
 
-    coda.enqueue(200);
-    coda.enqueue(400);
-    coda.enqueue(700);
+    coda.enqueue(300);
+    coda.enqueue(500);
+    coda.enqueue(600);
 
  
     cout<< "Elemento in testa alla coda: " << coda.front();
@@ -43,11 +43,11 @@ int main() {
     cout<< "Dimensione della coda dopo il dequeue: " << coda.size();
 
     if (coda.isEmpty()) {
-    cout<< "La coda è vuota";
+    cout<< "La coda Ã¨ vuota";
     } else {
-    cout<< "La coda non è vuota";
+    cout<< "La coda non Ã¨ vuota";
     }
 
 
-    return 0;
+Â Â Â Â returnÂ 0;
 }
